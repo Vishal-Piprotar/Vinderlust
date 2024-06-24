@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+::selection {
+  color: white;
+  background: orange;
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: orange;
+}
+/* Disable text selection for the entire website */
+body {
+  /* -webkit-user-select: none; Safari */
+  /* -ms-user-select: none; IE 10 and IE 11 */
+  /* user-select: none; Standard syntax */
+}
+
+@layer base {
+  .font-primary {
+    @apply font-sans text-lg text-gray-900;
+  }
+
+  /* body {
+      @apply font-primary bg-gray-200;
+    } */
+
+  .dropdown {
+    @apply w-full lg:max-w-[296px] cursor-pointer;
+  }
+
+  .dropdown-btn {
+    @apply flex h-[64px] items-center px-[18px] border rounded-lg;
+  }
+
+  .dropdown-icon-primary {
+    @apply text-2xl mr-[18px] text-orange-500;
+  }
+
+  .dropdown-icon-secondary {
+    @apply text-2xl text-orange-500 ml-auto;
+  }
+
+  .dropdown-menu {
+    @apply px-6 py-8 text-[15px] space-y-6 shadow-md bg-white absolute w-full z-10 list-none rounded-b-lg;
+  }
+}
+.dropdown-menu {
+  max-height: 200px; /* Adjust this value to your desired maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}

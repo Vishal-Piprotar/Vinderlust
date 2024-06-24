@@ -1,0 +1,43 @@
+.input-group {
+  position: relative;
+  overflow: hidden; /* Add this line */
+}
+
+.input {
+  all: unset;
+  width: 280px;
+  padding: 13px;
+  border: 1px solid #050560;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  pointer-events: none;
+  transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border: 2px solid orange;
+  padding: 16px;
+  color: #050560;
+  font-weight: 600;
+}
+
+.input:is(:focus, :valid) ~ label {
+  transform: translateY(-105%) scale(0.9);
+  padding-inline: 0.3rem;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: orangered;
+  font-weight: bold;
+}
+
+.input-group .input:focus {
+  overflow: hidden; 
+}

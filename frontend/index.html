@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./v.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinderlust -  Stay Comfort Hotels</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      document.addEventListener('keydown', function(event) {
+        if (event.keyCode == 123) { // F12
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Ctrl+Shift+I
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.keyCode == 85) { // Ctrl+U
+          event.preventDefault();
+        }
+      });
+    </script>
+
+  </body>
+</html>
