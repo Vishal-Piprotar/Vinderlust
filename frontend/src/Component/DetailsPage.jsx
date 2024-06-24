@@ -65,8 +65,8 @@ const DetailsPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const { data: { key } } = await axios.get('https://vbook-backend.onrender.com/api/getKey');
-      const { data: { order } } = await axios.post('https://vbook-backend.onrender.com/api/checkout', { amount });
+      const { data: { key } } = await axios.get('https://vinderlust-backend.onrender.com//api/getKey');
+      const { data: { order } } = await axios.post('https://vinderlust-backend.onrender.com/api/checkout', { amount });
 
       // Fetch user's location using Geolocation API
       navigator.geolocation.getCurrentPosition(async (position) => {
