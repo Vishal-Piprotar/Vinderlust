@@ -65,7 +65,7 @@ const DetailsPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const { data: { key } } = await axios.get('https://vinderlust-backend.onrender.com//api/getKey');
+      const { data: { key } } = await axios.get('https://vinderlust-backend.onrender.com/api/getKey');
       const { data: { order } } = await axios.post('https://vinderlust-backend.onrender.com/api/checkout', { amount });
 
       // Fetch user's location using Geolocation API
@@ -151,8 +151,7 @@ const DetailsPage = () => {
     // Convert extractedNumber to a number
     const amount = parseFloat(extractedNumber) * 100; // Convert to paise
   
-    console.log("Extracted Number:", extractedNumber);
-    // console.log("Amount in paise:", amount);
+    
   
     checkoutHandler(amount); // Pass the full amount to your checkout handler
   };
